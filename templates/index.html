@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1><u>---PREDICTION FOR HOUSING PRICE---</u></h1>
+    <br>
+    <img src={{url_for('static',filename="housesbanner.png")}} height="250" width="1340"/>
+    <br>
+    <br>
+    <form action="{{url_for('predict')}}" method="POST">
+        <br>
+        <h2>Enter Area of House</h2>
+        <input type="text", name="Area", placeholder="Area", required="required">
+        <br>
+        <h2>Enter Number of Bedroom in House</h2>
+        <input type="text" , name="Bedroom" , placeholder="Bedroom" , required="required">
+        <br>
+        <h2>Enter Age of House</h2>
+        <input type="text" , name="Age" , placeholder="Age" , required="required">
+        <br>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Price</button>
+    </form>
+    <br>
+    <br>
+    <h2>{{ text }}</h2>
+</body>
+</html>
